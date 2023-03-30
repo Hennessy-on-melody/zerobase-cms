@@ -1,0 +1,32 @@
+#spring:
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/zb_commerce?serverTimezone=UTC&characterEncoding=UTF-8
+#    driver: org.mariadb.jdbc.Driver
+#
+#    username: pu
+#    password: a1234
+#
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+##    defer-datasource-initialization: true
+#
+#
+#server:
+#  port: 8081
+#
+#
+#feign:
+#  okhttp:
+#    enabled: true
+#
+#jwt:
+#  secret: secretKey

@@ -9,23 +9,25 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
-@Entity
-@Setter
+
 @Getter
-@Builder
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@Entity
 @AuditOverride(forClass = BaseEntity.class)
 public class Customer extends BaseEntity{
     @Id
+    @Column(name = "id" , nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
     @Column(unique = true)
     private String email;
-    private String name;
+
     private String password;
+    private String name;
     private String phone;
     private LocalDate birth;
 
@@ -33,7 +35,8 @@ public class Customer extends BaseEntity{
     private String verificationCode;
     private boolean verify;
 
-    public static Customer from(SignUpForm form){
+    private Long balance;
+    public static Customer from(SignUpForm form) {
         return Customer.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
                 .password(form.getPassword())
@@ -43,5 +46,5 @@ public class Customer extends BaseEntity{
                 .verify(false)
                 .build();
     }
-
 }
+
