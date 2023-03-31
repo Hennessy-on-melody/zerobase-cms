@@ -12,7 +12,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ServletComponentScan
 @EnableFeignClients
 @SpringBootApplication
-@RequiredArgsConstructor
 @EnableJpaAuditing
 @EnableJpaRepositories
 public class UserApplication {
