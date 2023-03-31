@@ -1,0 +1,46 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "2023-03-31",
+  "email": "hennessy.on.melody@gmail.com",
+  "name": "name",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=hennessy.on.melody@gmail.com&code=h8jphDjQ4n
+
+### 로그인 (고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "hennessy.on.melody@gmail.com",
+  "password": "pw"
+}
+
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwdjZuZGd4TEVMdHNwQ09GU1QvU0F2aUZxWkFCMmladEM5TzlDa1pCdWxvPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAyNTI0ODIsImV4cCI6MTY4MDMzODg4Mn0.5w3NUaZGjnBsFVDyT_74u7Up3jqJGSGVZIq0By3a7K4
+
+### 잔액 변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwdjZuZGd4TEVMdHNwQ09GU1QvU0F2aUZxWkFCMmladEM5TzlDa1pCdWxvPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAyNTI0ODIsImV4cCI6MTY4MDMzODg4Mn0.5w3NUaZGjnBsFVDyT_74u7Up3jqJGSGVZIq0By3a7K4
+
+{
+  "from": "hennessy.on.melody@gmail.com",
+  "message": "충전",
+  "money": 50000
+}
+
+######################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
