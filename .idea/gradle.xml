@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/user-api" />
+            <option value="$PROJECT_DIR$/zb-domain" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
