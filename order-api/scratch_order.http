@@ -1,14 +1,14 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDIxMDI1LCJleHAiOjE2ODA1MDc0MjV9.wIVum9WEMIUS1Dyzn30wdRUK56Bu2mydDjegHariQfk
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
 
 {
-  "description": "string",
+  "description": "상품 설명",
   "items": [
     {
       "count": 1,
-      "name": "240",
+      "name": 270,
       "price": 100000
     }
   ],
@@ -18,15 +18,47 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y
 ### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDIxMDI1LCJleHAiOjE2ODA1MDc0MjV9.wIVum9WEMIUS1Dyzn30wdRUK56Bu2mydDjegHariQfk
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
 
 
+{
+  "productId": 1,
+  "count": 1,
+  "name": 280,
+  "price": 100000
+}
+
+### 상품 수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
+
+{
+  "description": "상품 설명",
+  "items": [
     {
-      "productId": 1,
+      "id" : 1,
       "count": 1,
-      "name": "240",
+      "name": 280,
       "price": 100000
     }
+  ],
+  "id" : 1,
+  "name": "나이키 에어포스 한정판"
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
+
+
+{
+  "id": 1,
+  "count": 1,
+  "name": 260,
+  "price": 100000
+}
 
 
 
