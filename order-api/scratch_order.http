@@ -61,6 +61,32 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y
 }
 
 
+### 상품 삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "id" : 1,
+      "count": 1,
+      "name": 280,
+      "price": 100000
+    }
+  ],
+  "id" : 1,
+  "name": "나이키 에어포스 한정판"
+}
+
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
+
+
+
 
 ### 이메일 인증 (고객)
 GET http://localhost:8081/signup/customer/verify?email=hennessy.on.melody@gmail.com&code=h8jphDjQ4n
