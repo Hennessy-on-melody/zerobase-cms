@@ -24,7 +24,7 @@ public class ProductItem extends BaseEntity{
     private String name;
 
     @Audited
-    private Integer prices;
+    private Integer price;
     private Integer count;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id")
@@ -34,7 +34,7 @@ public class ProductItem extends BaseEntity{
         return ProductItem.builder()
                 .sellerId(sellerId)
                 .name(form.getName())
-                .prices(form.getPrice())
+                .price(form.getPrice())
                 .count(form.getCount())
                 .build();
     }

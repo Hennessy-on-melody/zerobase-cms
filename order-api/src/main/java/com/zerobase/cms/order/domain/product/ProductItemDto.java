@@ -18,7 +18,7 @@ public class ProductItemDto {
         return ProductItemDto.builder()
                 .id(item.getId())
                 .name(item.getName())
-                .price(item.getPrices())
+                .price(item.getPrice())
                 .count(item.getCount())
                 .build();
     }
