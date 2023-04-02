@@ -39,8 +39,14 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwdjZuZGd4TEVMdHNwQ09GU1QvU0F2aUZxW
   "money": 50000
 }
 
-######################
-
-### 회원가입 (셀러)
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify?email=attempt3699@gmail.com&code=O6GyPaCziI
 
 ### 로그인 (셀러)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "attempt3699@gmail.com",
+  "password": "pw"
+}
