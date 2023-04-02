@@ -12,7 +12,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y
       "price": 100000
     }
   ],
-  "name": "나이키 에어포스"
+  "name": "나이키 에어포스1"
 }
 
 ### 상품 아이템 추가
@@ -86,6 +86,16 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4YUJhcFVXdnRKc0tHcWNHV0p4eUIyeEU0Y2o1Y2tNTHkxWFVvQzhGUGRFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDM5NjY3LCJleHAiOjE2ODA1MjYwNjd9.IsLMhsAjrqSarVW89uvCVGBYsuQ2-pyhSeV_ydAEJqE
 
 
+
+
+### 상품 검색
+GET http://localhost:8082/search/product?name=나이키
+Content-Type: application/json
+
+
+### 상품 디테일 검색
+GET http://localhost:8082/search/product/detail?productId=2
+Content-Type: application/json
 
 
 ### 이메일 인증 (고객)
