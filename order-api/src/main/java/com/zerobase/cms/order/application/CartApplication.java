@@ -148,4 +148,8 @@ public class CartApplication {
         return cart;
     }
 
+    public Cart updateCart(Long customerId, Cart cart) {
+        cartService.putCart(customerId, cart);
+        return getCart(customerId);
+    }
 }
